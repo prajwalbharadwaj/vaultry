@@ -1,13 +1,13 @@
-import Aura from "@primeuix/themes/aura";
-import { createPinia } from "pinia";
+import Aura from '@primeuix/themes/aura';
+import { createPinia } from 'pinia';
 
-import PrimeVue from "primevue/config";
+import PrimeVue from 'primevue/config';
 
-import { createApp } from "vue";
-import PrimeComponent from "~/common/lib/primevue.js";
-import App from "./App.vue";
-import router from "./router";
-import "./assets/main.css";
+import { createApp } from 'vue';
+import PrimeComponent from '~/common/lib/primevue.js';
+import App from './App.vue';
+import router from './router';
+import './assets/main.css';
 
 const app = createApp(App);
 
@@ -18,11 +18,14 @@ app.use(PrimeVue, {
     preset: Aura,
     options: {
       // prefix: 'p',
-      darkModeSelector: ".dark",
-      cssLayer: false
-    }
-  }
+      darkModeSelector: '.dark',
+      cssLayer: false,
+    },
+  },
 });
-app.component("PButton", PrimeComponent.Button);
+app.component('PButton', PrimeComponent.Button);
+app.component('PInputOtp', PrimeComponent.InputOtp);
+app.component('PInputText', PrimeComponent.InputText);
+app.component('PPassword', PrimeComponent.Password);
 
-app.mount("#app");
+app.mount('#app');

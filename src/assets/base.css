@@ -1,2 +1,12 @@
 @import "tailwindcss";
 @import "tailwindcss-primeui";
+
+/* :root {
+  --p-primary-color: #4f46e5;
+  --p-surface-card: #1f2937;
+  --p-text-color: #f9fafb;
+} */
+
+label {
+  @apply block text-sm/6 font-medium text-gray-900;
+}
