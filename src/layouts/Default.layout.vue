@@ -3,7 +3,7 @@ import Navbar from '~/common/components/Navbar.vue';
 import SidebarNavigation from '~/common/components/SidebarNavigation.vue';
 
 const state = reactive({
-  isMiniSidebar: false,
+  isMiniSidebar: true,
 });
 </script>
 
