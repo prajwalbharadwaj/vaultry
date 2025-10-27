@@ -28,5 +28,6 @@ app.component('PInputOtp', PrimeComponent.InputOtp);
 app.component('PInputText', PrimeComponent.InputText);
 app.component('PPassword', PrimeComponent.Password);
 app.component('PBreadcrumb', PrimeComponent.Breadcrumb);
+app.component('PChart', PrimeComponent.Chart);
 
 app.mount('#app');
