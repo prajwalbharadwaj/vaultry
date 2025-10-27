@@ -1,16 +1,15 @@
 @import "tailwindcss";
 @import "tailwindcss-primeui";
 
-/* :root {
-  --p-primary-color: #4f46e5;
-  --p-surface-card: #1f2937;
-  --p-text-color: #f9fafb;
-} */
+:root {
+  --p-breadcrumb-padding: 0!important;
+  --p-breadcrumb-background: transparent!important;
+}
 
 label {
   @apply block text-sm/6 font-medium text-gray-900;
 }
 
 .card {
-  @apply rounded-lg bg-white p-5 shadow-sm border border-gray-200;
+  @apply rounded-lg bg-white p-4 shadow-sm border border-gray-200;
 }
