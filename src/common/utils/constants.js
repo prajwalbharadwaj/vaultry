@@ -1,3 +1,14 @@
+export const statusMap = {
+  // type of transaction
+  income: { title: 'Income', color: '#22c55e' },
+  expense: { title: 'Expense', color: '#ef4444' },
+  balance: { title: 'Balance', color: '#3b82f6' },
+  // upcoming payment status
+  paid: { title: 'Paid', color: '#22c55e', backgroundColor: 'rgba(34, 197, 94, 0.1)' },
+  due: { title: 'Due', color: '#eab308', backgroundColor: 'rgba(234, 179, 8, 0.1)' },
+  cancel: { title: 'Cancel', color: '#ef4444', backgroundColor: 'rgba(239, 68, 68, 0.1)' },
+};
+
 export const currencies = {
   USD: {
     symbol: '$',
