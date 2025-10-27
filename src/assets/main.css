@@ -5,7 +5,7 @@
 }
 
 .card-header {
-  @apply text-lg font-medium leading-none tracking-tight;
+  @apply text-lg font-medium leading-none tracking-tight mb-5;
 }
 
 .p-metergroup-label-list{

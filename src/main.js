@@ -30,6 +30,8 @@ app.component('PPassword', PrimeComponent.Password);
 app.component('PBreadcrumb', PrimeComponent.Breadcrumb);
 app.component('PChart', PrimeComponent.Chart);
 app.component('PMeterGroup', PrimeComponent.MeterGroup);
+app.component('PColumn', PrimeComponent.Column);
+app.component('PDataTable', PrimeComponent.DataTable);
 
 app.directive('tooltip', PrimeComponent.Tooltip);
 
