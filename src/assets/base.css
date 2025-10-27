@@ -2,14 +2,22 @@
 @import "tailwindcss-primeui";
 
 :root {
-  --p-breadcrumb-padding: 0!important;
-  --p-breadcrumb-background: transparent!important;
+  --p-breadcrumb-padding: 0 !important;
+  --p-breadcrumb-background: transparent !important;
+}
+
+body {
+  background-color: #f3f3fa;
+  font-family: "Rubik", sans-serif;
 }
 
 label {
   @apply block text-sm/6 font-medium text-gray-900;
 }
 
-.card {
-  @apply rounded-lg bg-white p-4 shadow-sm border border-gray-200;
-}
+/* .rubik-<uniquifier> {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
