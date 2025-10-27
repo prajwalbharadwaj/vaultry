@@ -30,7 +30,7 @@ const data = [
 </script>
 
 <template>
-  <div class="grid grid-cols-4 gap-5">
+  <div class="grid md:grid-cols-4 gap-5">
     <div v-for="item in data" :key="item.title" class="card space-y-2">
       <p class="text-sm font-medium text-gray-500">
         {{ item.title }}

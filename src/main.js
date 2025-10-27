@@ -35,4 +35,7 @@ app.component('PDataTable', PrimeComponent.DataTable);
 
 app.directive('tooltip', PrimeComponent.Tooltip);
 
+const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || window.matchMedia('(max-width: 768px)').matches;
+app.config.globalProperties.$isMobile = isMobile;
+
 app.mount('#app');

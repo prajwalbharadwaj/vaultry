@@ -30,11 +30,13 @@ const navigation = [
       <ul role="list" class="-mx-2 space-y-1">
         <li v-for="item in navigation" :key="item.name">
           <a
-            class="group flex gap-x-3 rounded-md p-2 pl-3 text-sm/6 font-semibold cursor-pointer items-center"
+            class="group flex gap-x-3 rounded-md p-2 pl-3 text-sm/6 font-semibold cursor-pointer items-center justify-center md:justify-start"
             :class="[route.name === item.to ? 'bg-gray-50 text-primary-600' : 'text-gray-700 hover:bg-gray-50 hover:text-primary-600']"
           >
-            <component :is="item.icon" />
-            {{ item.name }}
+            <component :is="item.icon" class="shrink-0" />
+            <p v-if="!$isMobile">
+              {{ item.name }}
+            </p>
           </a>
         </li>
       </ul>
