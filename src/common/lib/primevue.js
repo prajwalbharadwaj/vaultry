@@ -3,7 +3,9 @@ import Button from 'primevue/button';
 import Chart from 'primevue/chart';
 import InputText from 'primevue/inputnumber';
 import InputOtp from 'primevue/inputotp';
+import MeterGroup from 'primevue/metergroup';
 import Password from 'primevue/password';
+import Tooltip from 'primevue/tooltip';
 
 export default {
   Button,
@@ -12,4 +14,6 @@ export default {
   InputText,
   Password,
   Chart,
+  MeterGroup,
+  Tooltip,
 };

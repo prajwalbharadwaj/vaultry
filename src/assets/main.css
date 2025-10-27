@@ -7,3 +7,7 @@
 .card-header {
   @apply text-lg font-medium leading-none tracking-tight;
 }
+
+.p-metergroup-label-list{
+  display: none!important;
+}

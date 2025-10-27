@@ -29,5 +29,8 @@ app.component('PInputText', PrimeComponent.InputText);
 app.component('PPassword', PrimeComponent.Password);
 app.component('PBreadcrumb', PrimeComponent.Breadcrumb);
 app.component('PChart', PrimeComponent.Chart);
+app.component('PMeterGroup', PrimeComponent.MeterGroup);
+
+app.directive('tooltip', PrimeComponent.Tooltip);
 
 app.mount('#app');
