@@ -1,12 +1,12 @@
 <script setup>
-import dayjs from "dayjs";
+import dayjs from 'dayjs';
 
 const state = reactive({
   chartData: null,
   chartData: null,
 });
 const currentMonthDays = dayjs().daysInMonth();
-const shortMonthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul","Aug", "Sep", "Oct", "Nov", "Dec"]
+const shortMonthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 function setChartData() {
   const documentStyle = getComputedStyle(document.documentElement);
   const labels = Array.from({ length: currentMonthDays }, (_, i) => i + 1);
@@ -16,11 +16,11 @@ function setChartData() {
     labels,
     datasets: [
       {
-        label: "Balance",
+        label: 'Balance',
         data,
         fill: true,
-        backgroundColor: "rgba(43, 127, 255, 0.05)",
-        borderColor: documentStyle.getPropertyValue("--p-blue-500"),
+        backgroundColor: 'rgba(43, 127, 255, 0.05)',
+        borderColor: documentStyle.getPropertyValue('--p-blue-500'),
         // tension: 0.4,
       },
     ],
@@ -28,9 +28,9 @@ function setChartData() {
 }
 function setChartOptions() {
   const documentStyle = getComputedStyle(document.documentElement);
-  const textColor = documentStyle.getPropertyValue("--p-text-color");
-  const textColorSecondary = documentStyle.getPropertyValue("--p-text-muted-color");
-  const surfaceBorder = documentStyle.getPropertyValue("--p-content-border-color");
+  const textColor = documentStyle.getPropertyValue('--p-text-color');
+  const textColorSecondary = documentStyle.getPropertyValue('--p-text-muted-color');
+  const surfaceBorder = documentStyle.getPropertyValue('--p-content-border-color');
 
   return {
     maintainAspectRatio: false,
@@ -39,10 +39,10 @@ function setChartOptions() {
       legend: { display: false, labels: { color: textColor } },
       tooltip: {
         callbacks: {
-          title: function (tooltipItems, data) {
-            const month =  dayjs().month();
+          title(tooltipItems) {
+            const month = dayjs().month();
             const xLabel = tooltipItems[0].label;
-            return xLabel+'-'+shortMonthNames[month]+'-'+dayjs().year();
+            return `${xLabel}-${shortMonthNames[month]}-${dayjs().year()}`;
           },
         },
       },
@@ -62,7 +62,9 @@ onMounted(() => {
 
 <template>
   <div class="card">
-    <div class="card-header mb-3">Balance Trends</div>
+    <div class="card-header mb-3">
+      Balance Trends
+    </div>
     <PChart
       type="line"
       :data="state.chartData"
