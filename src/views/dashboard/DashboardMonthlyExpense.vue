@@ -11,7 +11,7 @@ const value = ref([
 
 <template>
   <div class="card">
-    <div class="card-header mb-3">
+    <div class="card-header">
       Monthly Expense
     </div>
     <div>

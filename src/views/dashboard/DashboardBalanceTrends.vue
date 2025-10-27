@@ -7,6 +7,7 @@ const state = reactive({
 });
 const currentMonthDays = dayjs().daysInMonth();
 const shortMonthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
 function setChartData() {
   const documentStyle = getComputedStyle(document.documentElement);
   const labels = Array.from({ length: currentMonthDays }, (_, i) => i + 1);
@@ -62,7 +63,7 @@ onMounted(() => {
 
 <template>
   <div class="card">
-    <div class="card-header mb-3">
+    <div class="card-header">
       Balance Trends
     </div>
     <PChart

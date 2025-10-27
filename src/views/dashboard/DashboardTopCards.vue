@@ -1,4 +1,5 @@
 <script setup>
+import { statusMap } from '~/common/utils/constants.js';
 import { formatCurrency } from '~/common/utils/util.js';
 
 const data = [
@@ -6,6 +7,7 @@ const data = [
     title: 'Balance',
     amount: '432568',
     lastMonth: '28940',
+    type: 'balance',
   },
   {
     title: 'Total Period Change',
@@ -16,11 +18,13 @@ const data = [
     title: 'Income',
     amount: '24560',
     lastMonth: '23890',
+    type: 'income',
   },
   {
     title: 'Expense',
     amount: '2530',
     lastMonth: '26340',
+    type: 'expense',
   },
 ];
 </script>
@@ -31,7 +35,7 @@ const data = [
       <p class="text-sm font-medium text-gray-500">
         {{ item.title }}
       </p>
-      <p class="text-3xl font-bold">
+      <p class="text-3xl font-bold" :style="{ color: statusMap[item.type]?.color }">
         {{ formatCurrency(item.amount) }}
       </p>
       <p class="flex items-center gap-2 text-sm text-gray-500">
