@@ -5,7 +5,7 @@ const state = reactive({
 </script>
 
 <template>
-  <div>
+  <div class="p-5">
     Dashboard
   </div>
 </template>
