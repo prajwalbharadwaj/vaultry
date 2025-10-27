@@ -14,13 +14,13 @@ import DashboardUpcomingPayments from '~/views/dashboard/DashboardUpcomingPaymen
     <DashboardTopCards />
 
     <div class="grid grid-cols-12 gap-5">
-      <DashboardBalanceTrends class="col-span-8" />
-      <DashboardMonthlyExpense class="col-span-4" />
+      <DashboardBalanceTrends class="col-span-9" />
+      <DashboardMonthlyExpense class="col-span-3" />
     </div>
-    <DashboardIncomeExpense />
     <div class="grid grid-cols-12 gap-5">
-      <DashboardUpcomingPayments class="col-span-4" />
-      <DashboardTransactionHistory class="col-span-8" />
+      <DashboardUpcomingPayments class="col-span-3" />
+      <DashboardIncomeExpense class="col-span-9" />
     </div>
+    <DashboardTransactionHistory />
   </div>
 </template>
