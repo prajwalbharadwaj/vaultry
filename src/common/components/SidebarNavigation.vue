@@ -8,7 +8,7 @@ defineProps({
     default: false,
   },
 });
-const { route } = useCommonImports();
+const { route,router } = useCommonImports();
 const navigation = [
   { name: 'Dashboard', to: 'dashboard', icon: IconTablerHome },
   { name: 'Transactions', to: 'transactions', icon: IconTablerHome },
@@ -28,7 +28,7 @@ const navigation = [
     </div>
     <nav class="flex flex-1 flex-col mt-2" aria-label="Sidebar">
       <ul role="list" class="-mx-2 space-y-1">
-        <li v-for="item in navigation" :key="item.name">
+        <li v-for="item in navigation" :key="item.name" @click="router.push({name:item.to})">
           <a
             v-tooltip="isMiniSidebar ? item.name : ''"
             class="group flex gap-x-3 rounded-md p-2 pl-3 text-sm/6 font-semibold cursor-pointer items-center"

@@ -25,8 +25,8 @@ const products = ref([
   },
 ]);
 
-const value = ref('Monthly');
-const options = ref(['Monthly', 'Weekly', 'Today']);
+// const value = ref('Monthly');
+// const options = ref(['Monthly', 'Weekly', 'Today']);
 
 const columns = [
   { field: 'code', header: 'Date' },

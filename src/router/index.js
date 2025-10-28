@@ -7,6 +7,28 @@ const routes = [
     path: '/',
     name: 'dashboard',
     component: () => import('~/views/dashboard/Dashboard.vue'),
+    meta: {
+      noAuthRequires: true,
+      title: 'Dashboard',
+    },
+  },
+  {
+    path: '/transactions',
+    name: 'transactions',
+    component: () => import('~/views/transactions/Transactions.vue'),
+    meta: {
+      noAuthRequires: true,
+      title: 'Transactions',
+    },
+  },
+  {
+    path: '/settings',
+    name: 'settings',
+    component: () => import('~/views/settings/Settings.vue'),
+    meta: {
+      noAuthRequires: true,
+      title: 'Settings',
+    },
   },
 ];
 

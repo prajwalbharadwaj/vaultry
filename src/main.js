@@ -32,6 +32,8 @@ app.component('PChart', PrimeComponent.Chart);
 app.component('PMeterGroup', PrimeComponent.MeterGroup);
 app.component('PColumn', PrimeComponent.Column);
 app.component('PDataTable', PrimeComponent.DataTable);
+app.component('PSelect', PrimeComponent.Select);
+app.component('PSelectButton', PrimeComponent.SelectButton);
 
 app.directive('tooltip', PrimeComponent.Tooltip);
 
