@@ -2,41 +2,13 @@
 import { statusMap } from '~/common/utils/constants.js';
 import { formatCurrency } from '~/common/utils/util';
 
-const products = ref([
-  {
-    id: '1000',
-    code: 'Fri, 13 Jun 2025',
-    name: 'Axis Bank',
-    payment_mode: 'Cash',
-    description: 'Groceries',
-    category: 'Household',
-    type: 'income',
-    amount: 24,
+const props = defineProps({
+  transactions: {
+    type: Array,
+    required: false,
+    default: () => [],
   },
-  {
-    id: '1001',
-    code: 'Fri, 13 Jun 2025',
-    name: 'Axis Bank',
-    payment_mode: 'Cash',
-    description: 'Groceries',
-    category: 'Household',
-    type: 'expense',
-    amount: 24,
-  },
-  {
-    id: '1002',
-    code: 'Fri, 13 Jun 2025',
-    name: 'Axis Bank',
-    payment_mode: 'Cash',
-    description: 'Groceries',
-    category: 'Household',
-    type: 'transfer',
-    amount: 24,
-  },
-]);
-
-// const value = ref('Monthly');
-// const filterColumns = ['type', 'amount'];
+});
 
 const columns = [
   { field: 'code', header: 'Date' },
@@ -46,14 +18,10 @@ const columns = [
   { field: 'payment_mode', header: 'Payment Mode' },
   { field: 'amount', header: 'Amount' },
 ];
-
-// const columns = computed(() => {
-//   return allColumns.filter(col => filterColumns.includes(col.field));
-// });
 </script>
 
 <template>
-  <PDataTable :value="products" paginator :rows="10" size="small">
+  <PDataTable :value="props.transactions" paginator :rows="10" size="small">
     <!-- <PColumn header="type" class="text-sm">
       <template #body="slotProps">
         <div class="flex items-center">

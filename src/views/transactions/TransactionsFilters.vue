@@ -1,9 +1,12 @@
 <script setup>
-const state = reactive({
-  search: '',
-  selectedType: { name: 'All Transactions', value: 'all_transactions' },
-  filterType: { title: 'All', value: 'all' },
+const props = defineProps({
+  filters: {
+    type: Object,
+    required: true,
+  },
 });
+
+const emit = defineEmits(['update:filters']);
 
 const filterDurations = ref([
   { name: 'All Transactions', value: 'all_transactions' },
@@ -18,13 +21,17 @@ const options = ref([
   { title: 'Expense', value: 'expense' },
   { title: 'Transfer', value: 'transfer' },
 ]);
+
+function updateFilters(key, value) {
+  emit('update:filters', { ...props.filters, [key]: value });
+}
 </script>
 
 <template>
   <div class="flex gap-4 justify-between">
     <div class="flex gap-4">
-      <PInputText v-model="state.search" type="text" placeholder="Search..." class="w-64" size="small" />
-      <PSelect v-model="state.selectedType" :options="filterDurations" option-label="name" placeholder="Select duration" class="w-full md:w-48" size="small">
+      <PInputText :model-value="filters.search" type="text" placeholder="Search..." class="w-64" size="small" @update:model-value="updateFilters('search', $event)" />
+      <PSelect :model-value="filters.selectedType" :options="filterDurations" option-label="name" placeholder="Select duration" class="w-full md:w-48" size="small" @update:model-value="updateFilters('selectedType', $event)">
         <template #option="{ option }">
           <div class="flex items-center text-sm">
             {{ option?.name }}
@@ -32,6 +39,6 @@ const options = ref([
         </template>
       </PSelect>
     </div>
-    <PSelectButton v-model="state.filterType" option-label="title" data-key="value" :options="options" size="small" />
+    <PSelectButton :model-value="filters.filterType" option-label="title" data-key="value" :options="options" size="small" @update:model-value="updateFilters('filterType', $event)" />
   </div>
 </template>
