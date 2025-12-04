@@ -15,9 +15,9 @@ defineProps({
     default: false,
   },
 });
+const emit = defineEmits(['toggleMiniSidebar']);
 const { route, router } = useCommonImports();
 const navigation = [
-
   { name: 'Dashboard', to: 'dashboard', icon: IconTablerHome },
   { name: 'Transactions', to: 'transactions', icon: IconTablerTransfer },
   { name: 'Stats', to: 'stats', icon: IconTablerChartBar },
@@ -31,7 +31,7 @@ const navigation = [
 
 <template>
   <div class="bg-white px-4">
-    <div class="text-2xl font-bold h-14 grid place-content-center">
+    <div class="text-2xl font-bold h-14 grid cursor-pointer place-content-center" @click="emit('toggleMiniSidebar', !isMiniSidebar)">
       {{ isMiniSidebar ? 'V' : 'Vaultry' }}
     </div>
     <nav class="flex flex-1 flex-col mt-2" aria-label="Sidebar">

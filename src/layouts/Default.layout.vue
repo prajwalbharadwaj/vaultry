@@ -13,6 +13,7 @@ const state = reactive({
       <SidebarNavigation
         :is-mini-sidebar="state.isMiniSidebar" class="fixed overflow-y-auto shrink-0 top-0 bottom-0 transition-all duration-300 ease-in-out"
         :class="state.isMiniSidebar ? 'w-20' : 'w-[220px]'"
+        @toggle-mini-sidebar="state.isMiniSidebar = $event"
       />
       <div class="flex-1 transition-all duration-300 ease-in-out" :class="state.isMiniSidebar ? 'ml-20' : 'ml-[220px]'">
         <!-- <Navbar :is-mini-sidebar="state.isMiniSidebar" @toggle-mini-sidebar="state.isMiniSidebar = $event" /> -->

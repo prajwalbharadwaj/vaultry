@@ -1,9 +1,10 @@
 export const statusMap = {
   // type of transaction
-  income: { title: 'Income', color: '#22c55e' },
-  expense: { title: 'Expense', color: '#ef4444' },
-  transfer: { title: 'Transfer', color: '#f59e0b' },
-  balance: { title: 'Balance', color: '#3b82f6' },
+  income: { title: 'Income', color: '#22c55e', backgroundColor: '#22c55e1a' },
+  expense: { title: 'Expense', color: '#ef4444', backgroundColor: '#ef44441a' },
+  transfer: { title: 'Transfer', color: '#f59e0b', backgroundColor: '#f59e0b1a' },
+  balance: { title: 'Balance', color: '#3b82f6', backgroundColor: '#3b82f61a' },
+  savings: { title: 'Balance', color: '#1f2937', backgroundColor: '#1f29371a' },
   // upcoming payment status
   paid: { title: 'Paid', color: '#22c55e', backgroundColor: 'rgba(34, 197, 94, 0.1)' },
   due: { title: 'Due', color: '#eab308', backgroundColor: 'rgba(234, 179, 8, 0.1)' },
