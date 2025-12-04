@@ -10,7 +10,7 @@ import DashboardUpcomingPayments from '~/views/dashboard/DashboardUpcomingPaymen
 
 <template>
   <div class="p-5 grid gap-5">
-    <PageHeader title="Dashboard" />
+    <PageHeader title="Dashboard" description="Welcome back! Here's your financial overview." />
     <DashboardTopCards />
 
     <div class="grid lg:grid-cols-12 gap-5">

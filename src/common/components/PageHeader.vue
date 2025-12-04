@@ -4,6 +4,10 @@ defineProps({
     type: String,
     default: 'Page Header',
   },
+  description: {
+    type: String,
+    default: '',
+  },
   breadcrumb: {
     type: String,
     default: 'Page Header',
@@ -20,10 +24,18 @@ defineProps({
 </script>
 
 <template>
-  <div class="flex items-center justify-between">
+  <div className="animate-fade-in">
+    <h1 className="text-3xl font-bold text-foreground">
+      {{ title }}
+    </h1>
+    <p className="text-gray-500">
+      {{ description }}
+    </p>
+  </div>
+  <!-- <div class="flex items-center justify-between">
     <h1 class="text-xl font-bold tracking-tight">
       {{ title }}
     </h1>
-    <!-- <PBreadcrumb :model="items" /> -->
-  </div>
+  </div> -->
+  <!-- <PBreadcrumb :model="items" /> -->
 </template>
