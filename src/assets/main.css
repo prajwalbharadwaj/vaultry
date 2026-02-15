@@ -1,11 +1,11 @@
 @import "./base.css";
 
 .card {
-  @apply rounded-lg bg-white p-6 shadow-sm border border-gray-200;
+  @apply rounded-lg bg-white p-6 shadow-sm border border-gray-200 dark:bg-gray-800 dark:border-gray-700;
 }
 
 .card-header {
-  @apply text-lg font-medium leading-none tracking-tight mb-5;
+  @apply text-lg font-medium leading-none tracking-tight mb-5 dark:text-gray-100;
 }
 
 .p-metergroup-label-list{

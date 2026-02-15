@@ -7,11 +7,13 @@ import { createApp } from 'vue';
 import PrimeComponent from '~/common/lib/primevue.js';
 import App from './App.vue';
 import router from './router';
+import { useThemeStore } from './stores/theme';
 import './assets/main.css';
 
 const app = createApp(App);
 
 app.use(createPinia());
+useThemeStore().initTheme();
 app.use(router);
 app.use(PrimeVue, {
   theme: {

@@ -24,11 +24,11 @@ defineProps({
 </script>
 
 <template>
-  <div className="animate-fade-in">
-    <h1 className="text-3xl font-bold text-foreground">
+  <div class="animate-fade-in">
+    <h1 class="text-3xl font-bold text-foreground dark:text-gray-100">
       {{ title }}
     </h1>
-    <p className="text-gray-500">
+    <p class="text-gray-500 dark:text-gray-400">
       {{ description }}
     </p>
   </div>

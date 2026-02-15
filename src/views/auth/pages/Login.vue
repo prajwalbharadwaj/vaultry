@@ -12,10 +12,10 @@ const state = reactive({
 
 <template>
   <div class="mx-auto w-full max-w-sm lg:w-96">
-    <div class="my-8 text-4xl font-bold tracking-tight text-gray-900">
+    <div class="my-8 text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
       Vaultry
     </div>
-    <div class="my-8 text-2xl/9 tracking-tight text-gray-900">
+    <div class="my-8 text-2xl/9 tracking-tight text-gray-900 dark:text-gray-100">
       Sign in to your account
     </div>
     <div class="grid gap-5">
@@ -30,9 +30,9 @@ const state = reactive({
       <PButton label="Login" @click="router.push({ name: 'dashboard' })" />
     </div>
     <div class="my-6 space-y-2">
-      <p class="text-sm text-gray-600">
+      <p class="text-sm text-gray-600 dark:text-gray-400">
         Don't have an account?
-        <a class="text-primary-500 hover:text-black cursor-pointer" @click="router.push({ name: 'register' })">Create an account</a>
+        <a class="text-primary-500 hover:text-black dark:hover:text-white cursor-pointer" @click="router.push({ name: 'register' })">Create an account</a>
       </p>
     </div>
   </div>
