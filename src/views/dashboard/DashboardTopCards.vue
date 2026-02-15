@@ -4,7 +4,9 @@ import IconTablerTrendingDown from '~icons/tabler/trending-down';
 import IconTablerTrendingUp from '~icons/tabler/trending-up';
 import { statusMap } from '~/common/utils/constants.js';
 import { formatCurrency } from '~/common/utils/util.js';
+import { useThemeStore } from '~/stores/theme.js';
 
+const themeStore = useThemeStore();
 const data = [
   {
     title: 'Balance',
@@ -44,7 +46,7 @@ const data = [
         <p class="text-sm font-medium text-gray-500 dark:text-gray-400">
           {{ item.title }}
         </p>
-        <p class="text-3xl font-bold" :style="{ color: statusMap[item.type]?.color }">
+        <p class="text-3xl font-bold" :style="{ color: themeStore.theme === 'dark' ? statusMap[item.type]?.dark_color : statusMap[item.type]?.color }">
           {{ formatCurrency(item.amount) }}
         </p>
         <p class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
