@@ -29,6 +29,42 @@ const routes = [
       noAuthRequires: true,
       title: 'Settings',
     },
+    children: [
+      {
+        path: '',
+        redirect: { name: 'settings-preferences' },
+      },
+      {
+        path: 'preferences',
+        name: 'settings-preferences',
+        component: () => import('~/views/settings/Preferences.vue'),
+        meta: { title: 'Preferences' },
+      },
+      {
+        path: 'account',
+        name: 'settings-account',
+        component: () => import('~/views/settings/SettingsAccount.vue'),
+        meta: { title: 'Account' },
+      },
+      {
+        path: 'security',
+        name: 'settings-security',
+        component: () => import('~/views/settings/SettingsSecurity.vue'),
+        meta: { title: 'Security' },
+      },
+      {
+        path: 'privacy',
+        name: 'settings-privacy',
+        component: () => import('~/views/settings/SettingsPrivacy.vue'),
+        meta: { title: 'Privacy' },
+      },
+      {
+        path: 'integrations',
+        name: 'settings-integrations',
+        component: () => import('~/views/settings/SettingsIntegrations.vue'),
+        meta: { title: 'Integrations' },
+      },
+    ],
   },
 ];
 
