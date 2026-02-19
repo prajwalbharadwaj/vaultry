@@ -1,5 +1,6 @@
 <script setup>
 import PageHeader from '~/common/components/PageHeader.vue';
+import NewTransactions from '~/views/transactions/NewTransactions.vue';
 import TransactionsFilters from '~/views/transactions/TransactionsFilters.vue';
 import TransactionsTable from '~/views/transactions/TransactionsTable.vue';
 
@@ -99,7 +100,11 @@ const filteredTransactions = computed(() => {
 
 <template>
   <div class="p-5 grid gap-5">
-    <PageHeader title="Transactions" />
+    <PageHeader title="Transactions">
+      <template #actions>
+        <NewTransactions />
+      </template>
+    </PageHeader>
     <div class="card">
       <div class="card-header">
         Transaction History

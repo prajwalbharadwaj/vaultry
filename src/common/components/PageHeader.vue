@@ -24,13 +24,18 @@ defineProps({
 </script>
 
 <template>
-  <div class="animate-fade-in">
-    <h1 class="text-3xl font-bold text-foreground dark:text-gray-100">
-      {{ title }}
-    </h1>
-    <p class="text-gray-500 dark:text-gray-400">
-      {{ description }}
-    </p>
+  <div class="animate-fade-in flex items-start justify-between gap-4">
+    <div>
+      <h1 class="text-3xl font-bold text-foreground dark:text-gray-100">
+        {{ title }}
+      </h1>
+      <p class="text-gray-500 dark:text-gray-400">
+        {{ description }}
+      </p>
+    </div>
+    <div v-if="$slots.actions" class="shrink-0">
+      <slot name="actions" />
+    </div>
   </div>
   <!-- <div class="flex items-center justify-between">
     <h1 class="text-xl font-bold tracking-tight">

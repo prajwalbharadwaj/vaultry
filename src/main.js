@@ -28,6 +28,7 @@ app.use(PrimeVue, {
 app.component('PButton', PrimeComponent.Button);
 app.component('PInputOtp', PrimeComponent.InputOtp);
 app.component('PInputText', PrimeComponent.InputText);
+app.component('PInputNumber', PrimeComponent.InputNumber);
 app.component('PPassword', PrimeComponent.Password);
 app.component('PBreadcrumb', PrimeComponent.Breadcrumb);
 app.component('PChart', PrimeComponent.Chart);
@@ -37,6 +38,8 @@ app.component('PDataTable', PrimeComponent.DataTable);
 app.component('PInputSwitch', PrimeComponent.InputSwitch);
 app.component('PSelect', PrimeComponent.Select);
 app.component('PSelectButton', PrimeComponent.SelectButton);
+app.component('PTextarea', PrimeComponent.Textarea);
+app.component('PDialog', PrimeComponent.Dialog);
 
 app.directive('tooltip', PrimeComponent.Tooltip);
 

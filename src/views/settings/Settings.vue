@@ -38,7 +38,7 @@ function saveSettings() {
 <template>
   <div class="p-5 grid gap-5">
     <PageHeader title="Settings" />
-    <div class="card p-6 max-w-m2xl">
+    <div class="card p-6 max-w-2xl">
       <h2 class="text-xl font-bold text-gray-900 dark:text-gray-100 mb-6">
         Preferences
       </h2>
