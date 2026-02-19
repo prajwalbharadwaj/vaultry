@@ -3,14 +3,11 @@ import IconTablerCalendarEvent from '~icons/tabler/calendar-event';
 import IconTablerChartBar from '~icons/tabler/chart-bar';
 import IconTablerCurrencyDollar from '~icons/tabler/currency-dollar';
 import IconTablerHome from '~icons/tabler/home';
-import IconTablerMoon from '~icons/tabler/moon';
 import IconTablerPigMoney from '~icons/tabler/pig-money';
 import IconTablerSettings from '~icons/tabler/settings';
-import IconTablerSun from '~icons/tabler/sun';
 import IconTablerTargetArrow from '~icons/tabler/target-arrow';
 import IconTablerTransfer from '~icons/tabler/transfer';
 import { useCommonImports } from '~/common/composables/common-imports.composable.js';
-import { useThemeStore } from '~/stores/theme.js';
 
 defineProps({
   isMiniSidebar: {
@@ -19,7 +16,6 @@ defineProps({
   },
 });
 const emit = defineEmits(['toggleMiniSidebar']);
-const themeStore = useThemeStore();
 const { route, router } = useCommonImports();
 const navigation = [
   { name: 'Dashboard', to: 'dashboard', icon: IconTablerHome },
@@ -54,17 +50,5 @@ const navigation = [
         </li>
       </ul>
     </nav>
-    <div class="mt-auto py-4 border-t border-gray-200 dark:border-gray-700">
-      <button
-        type="button"
-        class="flex items-center gap-2 w-full rounded-md p-2 pl-3 text-sm font-semibold cursor-pointer text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
-        :class="isMiniSidebar ? 'justify-center' : 'justify-start'"
-        @click="themeStore.toggleTheme()"
-      >
-        <IconTablerSun v-if="themeStore.theme === 'dark'" class="size-5 shrink-0" />
-        <IconTablerMoon v-else class="size-5 shrink-0" />
-        <span v-if="!isMiniSidebar">{{ themeStore.theme === 'dark' ? 'Light' : 'Dark' }} mode</span>
-      </button>
-    </div>
   </div>
 </template>

@@ -5,6 +5,7 @@ import Column from 'primevue/column';
 import DataTable from 'primevue/datatable';
 import InputText from 'primevue/inputnumber';
 import InputOtp from 'primevue/inputotp';
+import InputSwitch from 'primevue/inputswitch';
 import MeterGroup from 'primevue/metergroup';
 import Password from 'primevue/password';
 import Select from 'primevue/select';
@@ -18,6 +19,7 @@ export default {
   InputText,
   Password,
   Chart,
+  InputSwitch,
   Column,
   DataTable,
   MeterGroup,
