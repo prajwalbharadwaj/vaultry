@@ -25,7 +25,7 @@ const navigation = [
   { name: 'Goals', to: 'goals', icon: IconTablerTargetArrow },
   { name: 'Loans', to: 'loans', icon: IconTablerCurrencyDollar },
   { name: 'Schedule', to: 'schedule', icon: IconTablerCalendarEvent },
-  { name: 'Settings', to: 'settings', icon: IconTablerSettings },
+  { name: 'Settings', to: 'settings-preferences', icon: IconTablerSettings },
 ];
 </script>
 
