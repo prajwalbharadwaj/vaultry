@@ -1,12 +1,20 @@
 <script setup>
+import { random } from 'lodash-es';
+import configData from '~/assets/data/config.json';
 import { formatCurrency } from '~/common/utils/util.js';
 
-const value = ref([
-  { label: 'Apps', color: '#34d399', value: 16, amount: 100 },
-  { label: 'Messages', color: '#fbbf24', value: 8, amount: 100 },
-  { label: 'Media', color: '#60a5fa', value: 24, amount: 100 },
-  { label: 'System', color: '#c084fc', value: 10, amount: 100 },
-]);
+// const value = ref([
+//   { label: 'Apps', color: '#34d399', value: 16, amount: 100 },
+//   { label: 'Messages', color: '#fbbf24', value: 8, amount: 100 },
+//   { label: 'Media', color: '#60a5fa', value: 24, amount: 100 },
+//   { label: 'System', color: '#c084fc', value: 10, amount: 100 },
+// ]);
+
+const value = computed(() => {
+  return configData.categories.map((category) => {
+    return { label: category.name, color: category.color, value: random(100), amount: random(10) };
+  });
+});
 </script>
 
 <template>
