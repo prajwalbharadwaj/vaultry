@@ -1,0 +1,14 @@
+{
+  "categories": [
+    { "id": 1, "name": "Household", "type": "expense", "icon": "home", "color": "#3b82f6" },
+    { "id": 2, "name": "Groceries", "type": "expense", "icon": "shopping-cart", "color": "#22c55e" },
+    { "id": 3, "name": "Transport", "type": "expense", "icon": "car", "color": "#f59e0b" },
+    { "id": 4, "name": "Entertainment", "type": "expense", "icon": "device-tv", "color": "#a855f7" },
+    { "id": 5, "name": "Utilities", "type": "expense", "icon": "bolt", "color": "#eab308" },
+    { "id": 6, "name": "Healthcare", "type": "expense", "icon": "heart", "color": "#ef4444" },
+    { "id": 7, "name": "Shopping", "type": "expense", "icon": "basket", "color": "#ec4899" },
+    { "id": 8, "name": "Salary", "type": "income", "icon": "briefcase", "color": "#10b981" },
+    { "id": 9, "name": "Freelance", "type": "income", "icon": "code", "color": "#6366f1" },
+    { "id": 10, "name": "Investments", "type": "income", "icon": "trending-up", "color": "#14b8a6" }
+  ]
+}

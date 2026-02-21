@@ -8,7 +8,7 @@ import PrimeComponent from '~/common/lib/primevue.js';
 import App from './App.vue';
 import router from './router';
 import { useThemeStore } from './stores/theme';
-import './assets/main.css';
+import './assets/styles/main.css';
 
 const app = createApp(App);
 

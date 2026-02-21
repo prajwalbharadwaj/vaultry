@@ -54,6 +54,7 @@ function saveSettings() {
         <div class="flex gap-2 shrink-0">
           <PButton
             type="button"
+            :severity="themeStore.theme === 'light' ? 'primary' : 'secondary'"
             class="flex items-center gap-2 px-4 py-2.5 rounded-lg font-medium transition-colors"
             :class="themeStore.theme === 'light'
               ? 'border-2 border-green-500 text-green-600 dark:text-green-400 bg-white dark:bg-gray-800'
@@ -65,6 +66,7 @@ function saveSettings() {
           </PButton>
           <PButton
             type="button"
+            :severity="themeStore.theme === 'dark' ? 'primary' : 'secondary'"
             class="flex items-center gap-2 px-4 py-2.5 rounded-lg font-medium transition-colors"
             :class="themeStore.theme === 'dark'
               ? 'border-2 border-green-500 text-green-600 dark:text-green-400 bg-white dark:bg-gray-800'
