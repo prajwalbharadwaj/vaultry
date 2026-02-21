@@ -6,10 +6,10 @@ const route = useRoute();
 
 const subNavItems = [
   { id: 'preferences', label: 'Preferences', name: 'settings-preferences' },
-  { id: 'account', label: 'Account', name: 'settings-account' },
-  { id: 'security', label: 'Security', name: 'settings-security' },
-  { id: 'privacy', label: 'Privacy', name: 'settings-privacy' },
-  { id: 'integrations', label: 'Integrations', name: 'settings-integrations' },
+  { id: 'category', label: 'Category', name: 'settings-category' },
+  // { id: 'account', label: 'Account', name: 'settings-account' },
+  // { id: 'security', label: 'Security', name: 'settings-security' },
+  // { id: 'integrations', label: 'Integrations', name: 'settings-integrations' },
 ];
 
 function isActive(item) {

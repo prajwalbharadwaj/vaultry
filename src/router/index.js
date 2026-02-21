@@ -53,10 +53,10 @@ const routes = [
         meta: { title: 'Security' },
       },
       {
-        path: 'privacy',
-        name: 'settings-privacy',
-        component: () => import('~/views/settings/SettingsPrivacy.vue'),
-        meta: { title: 'Privacy' },
+        path: 'category',
+        name: 'settings-category',
+        component: () => import('~/views/settings/SettingsCategory.vue'),
+        meta: { title: 'Category' },
       },
       {
         path: 'integrations',
